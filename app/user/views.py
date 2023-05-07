@@ -10,7 +10,6 @@ from user.serialirzers import (
     AuthTokenSerializer,
 )
 
-from user.serialirzers import UserSerializer
 
 class CreateUserView(generics.CreateAPIView):
     """Create a new user in the system."""
@@ -32,4 +31,3 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     def get_object(self):
         """Retrieve and return the authenticated user."""
         return self.request.user
-
